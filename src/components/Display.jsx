@@ -1,4 +1,22 @@
+import { useState } from "react";
 import "../styles/Display.css";
+import Card from "./Card";
+import productsData from "../data/products";
+
 export default function Display() {
-  return <section className="display-container">Display</section>;
+  const [listProducts, setListProducts] = useState(productsData);
+
+  let productCards = listProducts.map((product) => (
+    <Card key={product.id} emoji={product.emoji} name={product.name} />
+  ));
+
+  return (
+    <section className="display-container">
+      <div className="search-container">
+        <input type="input" />
+        <button>Search</button>
+      </div>
+      <div className="cards-container">{productCards}</div>
+    </section>
+  );
 }

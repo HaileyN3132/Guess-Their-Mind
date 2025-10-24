@@ -2,5 +2,20 @@
   flex: 3;
   display: flex;
   flex-direction: column;
-  background-color: lightpink;
+}
+
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  flex-wrap: wrap;
 }
