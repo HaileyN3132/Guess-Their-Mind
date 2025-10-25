@@ -1,0 +1,13 @@
+.search-bar {
+  min-width: 100px;
+  width: 300px;
+  height: 25px;
+  outline: 2px solid #cdc1ff;
+  border: none;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+
+.search-bar:focus {
+  outline: 2px solid #a594f9;
+}
