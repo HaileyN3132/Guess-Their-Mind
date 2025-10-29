@@ -17,20 +17,17 @@ function Option({ description }) {
   );
 }
 
-export default function ChoicesSection({ title, isExpanded = false }) {
+export default function ChoicesSection({
+  title,
+  isExpanded = false,
+  choices = ["Option 1", "Option 2", "Option 3"],
+}) {
   const [expand, setExpand] = useState(isExpanded);
   function handleArrow() {
     setExpand((prev) => !prev);
   }
 
-  const mockOptions = [
-    "Option 1",
-    "Option 2",
-    "Option 3",
-    "Option 4",
-    "Option 5",
-  ];
-  const [options, setOption] = useState(mockOptions);
+  const [options, setOption] = useState(choices);
 
   let optionsList = options.map((option) => (
     <Option key={title + option} description={option} />
@@ -38,13 +35,12 @@ export default function ChoicesSection({ title, isExpanded = false }) {
 
   return (
     <section className="section-container">
-      <p className="title">
-        {title}{" "}
-        <span className="expand-icon" onClick={handleArrow}>
-          {expand ? "▼" : "▲"}
-        </span>
-      </p>
-      <div className="options-container">{optionsList}</div>
+      <button className="title" onClick={handleArrow}>
+        {title}
+        <span className="expand-icon">{expand ? "▼" : "▲"}</span>
+      </button>
+
+      {expand && <div className="options-container">{optionsList}</div>}
     </section>
   );
 }
