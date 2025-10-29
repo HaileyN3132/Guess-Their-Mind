@@ -1,0 +1,40 @@
+.section-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  row-gap: 15px;
+}
+
+.expand-icon {
+  color: #a594f9;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.options-container {
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.option {
+  padding: 5px 12px;
+  background-color: transparent;
+  border: 3px solid #f5efff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.option-selected {
+  border: 3px solid #a594f9;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}

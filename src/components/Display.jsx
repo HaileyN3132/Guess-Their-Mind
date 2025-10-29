@@ -10,11 +10,10 @@ export default function Display() {
     <Card key={product.id} emoji={product.emoji} name={product.name} />
   ));
 
-  function updateProductsList(data) {
-    console.log(`Parent received = ${data}`);
+  function updateProductsList(userInput) {
     setListProducts(() => {
       return productsData.filter((product) => {
-        return product.name.includes(data);
+        return product.name.includes(userInput);
       });
     });
   }
