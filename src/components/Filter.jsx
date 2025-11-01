@@ -2,7 +2,7 @@ import "../styles/Filter.css";
 import ChoicesSection from "./ChoicesSection";
 
 export default function Filter({ update }) {
-  const category = ["Produce", "Food", "Snack", "Beverages"];
+  const category = ["Produce", "Food", "Snack", "Beverage"];
 
   return (
     <div className="filter-container">

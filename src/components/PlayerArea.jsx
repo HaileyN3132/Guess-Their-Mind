@@ -4,9 +4,15 @@ import "../styles/PlayerArea.css";
 
 import Filter from "./Filter";
 import Display from "./Display";
-export default function PlayerArea() {
-  const [filterTarget, setFilterTarget] = useState([]);
 
+import productsData from "../data/products";
+
+export default function PlayerArea() {
+  //States
+  const [filterTarget, setFilterTarget] = useState([]);
+  const [listProducts, setListProducts] = useState(productsData);
+
+  // Functions
   function updateFilter(target) {
     setFilterTarget((prev) => {
       if (prev.includes(target)) {
@@ -20,7 +26,7 @@ export default function PlayerArea() {
   return (
     <div className="player-container">
       <Filter update={updateFilter} />
-      <Display />
+      <Display categoryTargets={filterTarget} />
     </div>
   );
 }
