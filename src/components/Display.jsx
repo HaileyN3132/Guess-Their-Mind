@@ -4,18 +4,38 @@ import Card from "./Card";
 import productsData from "../data/products";
 import SearchBar from "./SearchBar";
 
-export default function Display({ categoryTargets = [], targetTest }) {
+export default function Display({ filterTarget }) {
   const [products, setProducts] = useState(productsData);
 
   let productCards;
-  if (categoryTargets.length === 0) {
+  if (
+    filterTarget["category"].length === 0 &&
+    filterTarget["type"].length === 0 &&
+    filterTarget["season"].length === 0
+  ) {
     productCards = products.map((product) => (
       <Card key={product.id} emoji={product.emoji} name={product.name} />
     ));
   } else {
-    const filteredProducts = products.filter((product) =>
-      categoryTargets.includes(product.category)
-    );
+    let filteredProducts = products;
+    if (filterTarget["category"].length) {
+      filteredProducts = products.filter((product) =>
+        filterTarget["category"].includes(product.category)
+      );
+    }
+
+    if (filterTarget["type"].length) {
+      filteredProducts = filteredProducts.filter((product) =>
+        filterTarget["type"].includes(product.type)
+      );
+    }
+
+    if (filterTarget["season"].length) {
+      filteredProducts = filteredProducts.filter((product) =>
+        filterTarget["season"].includes(product.season)
+      );
+    }
+
     productCards = filteredProducts.map((product) => (
       <Card key={product.id} emoji={product.emoji} name={product.name} />
     ));
@@ -31,9 +51,9 @@ export default function Display({ categoryTargets = [], targetTest }) {
 
   return (
     <section className="display-container">
-      <p>{`Category = ${targetTest.category}`}</p>
-      <p>{`Type = ${targetTest.type}`}</p>
-      <p>{`Season = ${targetTest.season}`}</p>
+      <p>{`Category = ${filterTarget.category}`}</p>
+      <p>{`Type = ${filterTarget.type}`}</p>
+      <p>{`Season = ${filterTarget.season}`}</p>
       <div className="search-container">
         <SearchBar onChangeInput={updateProductsList} />
       </div>

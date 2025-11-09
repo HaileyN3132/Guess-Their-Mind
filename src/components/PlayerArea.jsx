@@ -8,14 +8,14 @@ import Display from "./Display";
 import productsData from "../data/products";
 
 export default function PlayerArea() {
-  const [filterTest, setFilterTest] = useState({
+  const [filterTarget, setFilterTarget] = useState({
     category: [],
     type: [],
     season: [],
   });
 
   function updateFilter(section, value) {
-    setFilterTest((prev) => {
+    setFilterTarget((prev) => {
       let copy = { ...prev };
 
       if (copy[section].includes(value)) {
@@ -31,7 +31,7 @@ export default function PlayerArea() {
   return (
     <div className="player-container">
       <Filter updateFilter={updateFilter} />
-      <Display targetTest={filterTest} />
+      <Display filterTarget={filterTarget} />
     </div>
   );
 }
