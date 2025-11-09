@@ -4,7 +4,7 @@ import Card from "./Card";
 import productsData from "../data/products";
 import SearchBar from "./SearchBar";
 
-export default function Display({ categoryTargets = [] }) {
+export default function Display({ categoryTargets = [], targetTest }) {
   const [products, setProducts] = useState(productsData);
 
   let productCards;
@@ -31,6 +31,9 @@ export default function Display({ categoryTargets = [] }) {
 
   return (
     <section className="display-container">
+      <p>{`Category = ${targetTest.category}`}</p>
+      <p>{`Type = ${targetTest.type}`}</p>
+      <p>{`Season = ${targetTest.season}`}</p>
       <div className="search-container">
         <SearchBar onChangeInput={updateProductsList} />
       </div>

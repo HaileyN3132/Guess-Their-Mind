@@ -8,25 +8,30 @@ import Display from "./Display";
 import productsData from "../data/products";
 
 export default function PlayerArea() {
-  //States
-  const [filterTarget, setFilterTarget] = useState([]);
-  const [listProducts, setListProducts] = useState(productsData);
+  const [filterTest, setFilterTest] = useState({
+    category: [],
+    type: [],
+    season: [],
+  });
 
-  // Functions
-  function updateFilter(target) {
-    setFilterTarget((prev) => {
-      if (prev.includes(target)) {
-        return prev.filter((item) => item !== target);
+  function updateFilter(section, value) {
+    setFilterTest((prev) => {
+      let copy = { ...prev };
+
+      if (copy[section].includes(value)) {
+        copy[section] = copy[section].filter((item) => item !== value);
       } else {
-        return [...prev, target];
+        copy[section] = [...copy[section], value];
       }
+
+      return copy;
     });
   }
 
   return (
     <div className="player-container">
-      <Filter update={updateFilter} />
-      <Display categoryTargets={filterTarget} />
+      <Filter updateFilter={updateFilter} />
+      <Display targetTest={filterTest} />
     </div>
   );
 }
