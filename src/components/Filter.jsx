@@ -6,7 +6,7 @@ export default function Filter({ updateFilter }) {
   const options = {
     category: [...new Set(productsData.map((item) => item.category))],
     type: [...new Set(productsData.map((item) => item.type))],
-    season: ["Spring", "Summer", "Fall", "Winter"],
+    season: [...new Set(productsData.flatMap((item) => item.season))],
   };
 
   return (

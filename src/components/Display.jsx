@@ -32,7 +32,7 @@ export default function Display({ filterTarget }) {
 
     if (filterTarget["season"].length) {
       filteredProducts = filteredProducts.filter((product) =>
-        filterTarget["season"].includes(product.season)
+        product.season.some((season) => filterTarget["season"].includes(season))
       );
     }
 

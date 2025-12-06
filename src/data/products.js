@@ -4,6 +4,7 @@ export default [
     name: "Broccoli",
     category: "Produce",
     type: "Vegetable",
+    season: ["Spring", "Fall", "Winter"],
     emoji: "🥦",
   },
   {
@@ -11,6 +12,7 @@ export default [
     name: "Carrot",
     category: "Produce",
     type: "Vegetable",
+    season: ["Spring", "Fall"],
     emoji: "🥕",
   },
   {
@@ -18,6 +20,7 @@ export default [
     name: "Corn",
     category: "Produce",
     type: "Vegetable",
+    season: ["Summer", "Fall"],
     emoji: "🌽",
   },
   {
@@ -25,6 +28,7 @@ export default [
     name: "Hot Pepper",
     category: "Produce",
     type: "Vegetable",
+    season: ["Summer", "Fall"],
     emoji: "🌶️",
   },
   {
@@ -32,6 +36,7 @@ export default [
     name: "Potato",
     category: "Produce",
     type: "Vegetable",
+    season: ["Fall"],
     emoji: "🥔",
   },
   {
@@ -39,6 +44,7 @@ export default [
     name: "Apple",
     category: "Produce",
     type: "Fruit",
+    season: ["Summer", "Fall"],
     emoji: "🍎",
   },
   {
@@ -46,6 +52,7 @@ export default [
     name: "Banana",
     category: "Produce",
     type: "Fruit",
+    season: ["All Year"],
     emoji: "🍌",
   },
   {
@@ -53,6 +60,7 @@ export default [
     name: "Grapes",
     category: "Produce",
     type: "Fruit",
+    season: ["Summer", "Fall"],
     emoji: "🍇",
   },
   {
@@ -60,6 +68,7 @@ export default [
     name: "Strawberry",
     category: "Produce",
     type: "Fruit",
+    season: ["Spring", "Summer"],
     emoji: "🍓",
   },
   {
@@ -67,6 +76,7 @@ export default [
     name: "Watermelon",
     category: "Produce",
     type: "Fruit",
+    season: ["Summer", "Fall"],
     emoji: "🍉",
   },
   {
@@ -74,6 +84,7 @@ export default [
     name: "Milk",
     category: "Beverage",
     type: "Dairy",
+    season: ["All Year"],
     emoji: "🥛",
   },
   {
@@ -81,6 +92,7 @@ export default [
     name: "Juice",
     category: "Beverage",
     type: "Non-alcoholic",
+    season: ["All Year"],
     emoji: "🧃",
   },
   {
@@ -88,6 +100,7 @@ export default [
     name: "Coffee",
     category: "Beverage",
     type: "Hot drink",
+    season: ["All Year", "Winter"],
     emoji: "☕",
   },
   {
@@ -95,20 +108,23 @@ export default [
     name: "Tea",
     category: "Beverage",
     type: "Hot drink",
+    season: ["All Year", "Winter"],
     emoji: "🍵",
   },
   {
     id: 15,
     name: "Boba",
     category: "Beverage",
-    type: "Cold",
+    type: "Cold drink",
+    season: ["All Year", "Summer"],
     emoji: "🧋",
   },
   {
     id: 16,
     name: "Soda",
     category: "Beverage",
-    type: "Cold",
+    type: "Cold drink",
+    season: ["All Year", "Summer"],
     emoji: "🥤",
   },
   {
@@ -116,6 +132,7 @@ export default [
     name: "Beer",
     category: "Beverage",
     type: "Alcoholic",
+    season: ["All Year"],
     emoji: "🍺",
   },
   {
@@ -123,6 +140,7 @@ export default [
     name: "Wine",
     category: "Beverage",
     type: "Alcoholic",
+    season: ["All Year"],
     emoji: "🍷",
   },
   {
@@ -130,6 +148,7 @@ export default [
     name: "Chicken",
     category: "Food",
     type: "Protein",
+    season: ["All Year"],
     emoji: "🍗",
   },
   {
@@ -137,6 +156,7 @@ export default [
     name: "Meat",
     category: "Food",
     type: "Protein",
+    season: ["All Year"],
     emoji: "🥩",
   },
   {
@@ -144,6 +164,7 @@ export default [
     name: "Chocolate",
     category: "Food",
     type: "Snack",
+    season: ["All Year"],
     emoji: "🍫",
   },
   {
@@ -151,6 +172,7 @@ export default [
     name: "Ice Cream",
     category: "Food",
     type: "Dessert",
+    season: ["All Year", "Summer"],
     emoji: "🍨",
   },
 ];
