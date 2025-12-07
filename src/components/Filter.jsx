@@ -2,7 +2,7 @@ import "../styles/Filter.css";
 import ChoicesSection from "./ChoicesSection";
 import productsData from "../data/products";
 
-export default function Filter({ updateFilter }) {
+export default function Filter({ updateFilter, filterTarget }) {
   const options = {
     category: [...new Set(productsData.map((item) => item.category))],
     type: [...new Set(productsData.map((item) => item.type))],
@@ -16,12 +16,14 @@ export default function Filter({ updateFilter }) {
         isExpanded
         choices={options.category}
         updateFilter={updateFilter}
+        filterTarget={filterTarget}
       />
       <ChoicesSection
         title="Type"
         isExpanded
         choices={options.type}
         updateFilter={updateFilter}
+        filterTarget={filterTarget}
       />
 
       <ChoicesSection
@@ -29,6 +31,7 @@ export default function Filter({ updateFilter }) {
         isExpanded
         choices={options.season}
         updateFilter={updateFilter}
+        filterTarget={filterTarget}
       />
     </div>
   );

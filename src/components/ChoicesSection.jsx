@@ -1,8 +1,8 @@
 import "../styles/ChoicesSection.css";
 import { useState } from "react";
 
-function Option({ description, section, updateFilter }) {
-  const [selected, setSelected] = useState(false);
+function Option({ description, section, updateFilter, isSelected }) {
+  const [selected, setSelected] = useState(isSelected);
 
   function handleClick() {
     setSelected((prev) => !prev);
@@ -23,6 +23,7 @@ export default function ChoicesSection({
   isExpanded = false,
   choices = ["Option 1", "Option 2", "Option 3"],
   updateFilter,
+  filterTarget,
 }) {
   const [expand, setExpand] = useState(isExpanded);
   function handleArrow() {
@@ -37,6 +38,7 @@ export default function ChoicesSection({
       description={option}
       section={title}
       updateFilter={updateFilter}
+      isSelected={filterTarget[title.toLowerCase()].includes(option)}
     />
   ));
 

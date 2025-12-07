@@ -30,7 +30,7 @@ export default function PlayerArea() {
 
   return (
     <div className="player-container">
-      <Filter updateFilter={updateFilter} />
+      <Filter updateFilter={updateFilter} filterTarget={filterTarget} />
       <Display filterTarget={filterTarget} />
     </div>
   );
