@@ -51,9 +51,6 @@ export default function Display({ filterTarget }) {
 
   return (
     <section className="display-container">
-      <p>{`Category = ${filterTarget.category}`}</p>
-      <p>{`Type = ${filterTarget.type}`}</p>
-      <p>{`Season = ${filterTarget.season}`}</p>
       <div className="search-container">
         <SearchBar onChangeInput={updateProductsList} />
       </div>
