@@ -5,8 +5,6 @@ import "../styles/PlayerArea.css";
 import Filter from "./Filter";
 import Display from "./Display";
 
-import productsData from "../data/products";
-
 export default function PlayerArea() {
   const [filterTarget, setFilterTarget] = useState({
     category: [],
@@ -28,9 +26,21 @@ export default function PlayerArea() {
     });
   }
 
+  function resetFilter() {
+    setFilterTarget(() => ({
+      category: [],
+      type: [],
+      season: [],
+    }));
+  }
+
   return (
     <div className="player-container">
-      <Filter updateFilter={updateFilter} filterTarget={filterTarget} />
+      <Filter
+        updateFilter={updateFilter}
+        filterTarget={filterTarget}
+        resetFilter={resetFilter}
+      />
       <Display filterTarget={filterTarget} />
     </div>
   );

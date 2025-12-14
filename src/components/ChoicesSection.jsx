@@ -2,15 +2,13 @@ import "../styles/ChoicesSection.css";
 import { useState } from "react";
 
 function Option({ description, section, updateFilter, isSelected }) {
-  const [selected, setSelected] = useState(isSelected);
-
   function handleClick() {
-    setSelected((prev) => !prev);
     updateFilter(section.toLowerCase(), description); // updateFilter
   }
+
   return (
     <button
-      className={`option ${selected ? "option-selected" : ""}`}
+      className={`option ${isSelected ? "option-selected" : ""}`}
       onClick={handleClick}
     >
       {description}

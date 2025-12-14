@@ -2,7 +2,7 @@ import "../styles/Filter.css";
 import ChoicesSection from "./ChoicesSection";
 import productsData from "../data/products";
 
-export default function Filter({ updateFilter, filterTarget }) {
+export default function Filter({ updateFilter, filterTarget, resetFilter }) {
   const options = {
     category: [...new Set(productsData.map((item) => item.category))],
     type: [...new Set(productsData.map((item) => item.type))],
@@ -33,6 +33,12 @@ export default function Filter({ updateFilter, filterTarget }) {
         updateFilter={updateFilter}
         filterTarget={filterTarget}
       />
+
+      <div className="btn-container">
+        <button className="reset-btn" onClick={resetFilter}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 }

@@ -5,3 +5,19 @@
   flex: 1;
   background-color: #fefcff;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.reset-btn {
+  width: 100px;
+  height: 25px;
+  cursor: pointer;
+  color: #a594f9;
+  font-size: 16px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: none;
+}
