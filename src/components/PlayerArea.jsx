@@ -35,7 +35,7 @@ export default function PlayerArea() {
   }
 
   return (
-    <div className="player-container">
+    <div className="flex flex-row bg-[#f5efff] ">
       <Filter
         updateFilter={updateFilter}
         filterTarget={filterTarget}

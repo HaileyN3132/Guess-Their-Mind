@@ -4,7 +4,7 @@ import PlayerArea from "../components/PlayerArea";
 export default function Game() {
   return (
     <>
-      <div className="container">
+      <div className="flex flex-col h-full">
         <CustomerArea />
         <PlayerArea />
       </div>

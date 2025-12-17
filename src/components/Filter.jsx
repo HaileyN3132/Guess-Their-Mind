@@ -10,7 +10,7 @@ export default function Filter({ updateFilter, filterTarget, resetFilter }) {
   };
 
   return (
-    <div className="filter-container">
+    <div className="flex flex-col flex-1 gap-10 bg-[#fefcff]">
       <ChoicesSection
         title="Category"
         isExpanded
